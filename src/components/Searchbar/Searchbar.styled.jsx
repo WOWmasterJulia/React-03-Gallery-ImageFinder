@@ -42,6 +42,11 @@ export const Button = styled.button`
   transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
   cursor: pointer;
   outline: none;
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  &:hover,
+  &:focus {
+    transform: scale(1.15);
+  }
 `;
 
 export const ButtonLabel = styled.span`
@@ -54,6 +59,7 @@ export const ButtonLabel = styled.span`
   white-space: nowrap;
   clip-path: inset(50%);
   border: 0;
+  
 `;
 
 export const Input = styled.input`

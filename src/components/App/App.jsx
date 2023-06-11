@@ -24,6 +24,16 @@ export class App extends Component {
     ) {
       this.getImages();
     }
+    if (prevState.currentPage !== this.state.images) {
+      setTimeout(() => {
+        window.scrollBy({
+          top: 340 * 3,
+          behavior: 'smooth',
+        });
+      }, 500
+      );
+    }
+    
   }
 
   getImages = async () => {
@@ -32,7 +42,7 @@ export class App extends Component {
     if (this.abortCtrl) {
       this.abortCtrl.abort();
     }
-
+    
     this.abortCtrl = new AbortController();
 
     try {
