@@ -25,9 +25,9 @@ export class Searchbar extends Component {
       <>
         <Header>
           <Form onSubmit={this.onSearchSubmit}>
-            <Button type="submit">
+            {/* <Button type="submit">
               <ButtonLabel>Search</ButtonLabel>
-            </Button>
+            </Button> */}
 
             <Input
               name="search"
@@ -37,6 +37,9 @@ export class Searchbar extends Component {
               placeholder="Search images and photos"
               onChange={this.onInputChange}
             />
+            <Button type="submit">
+              <ButtonLabel>Search</ButtonLabel>
+            </Button>
           </Form>
         </Header>
       </>
